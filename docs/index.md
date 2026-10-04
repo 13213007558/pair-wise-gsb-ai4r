@@ -49,6 +49,7 @@ require 'ai4r'
 * [Search Algorithms](search_algorithms.md) – breadth-first and depth-first search implementations.
 * [Clusterer Bench](clusterer_bench.md) – compare clustering algorithms on small datasets.
 * [Monte Carlo Tree Search](monte_carlo_tree_search.md) – generic UCT search.
+* [Information Set MCTS](ismcts.md) – single-observer search for hidden-information games.
 * [A* Search](a_star_search.md) – heuristic best-first path search.
 * [Transformer](transformer.md) – a minimal take on the attention-powered architecture that transformed modern AI.
 * [Decode-only Classification Example](../examples/transformer/decode_classifier_example.rb)
