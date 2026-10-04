@@ -48,6 +48,7 @@ require_relative 'ai4r/genetic_algorithm/genetic_algorithm'
 # Reinforcement Learning
 require_relative 'ai4r/reinforcement/q_learning'
 require_relative 'ai4r/reinforcement/policy_iteration'
+require_relative 'ai4r/reinforcement/prioritized_sweeping'
 
 # Search
 require_relative 'ai4r/search/bfs'
