@@ -41,6 +41,39 @@ end
 search = Ai4r::GeneticAlgorithm::GeneticSearch.new(50, 100, MyChromosome)
 ```
 
+### Multi-objective search (NSGA-II)
+
+Pass `objective_directions` to enable NSGA-II. Each direction is either
+`:minimize` or `:maximize`, and the chromosome's `fitness` method must return
+one numeric value for every objective. Parents and offspring are combined,
+ranked into non-dominated fronts, and truncated with crowding distance.
+
+```ruby
+class RouteChromosome < Ai4r::GeneticAlgorithm::ChromosomeBase
+  def fitness
+    [total_cost, total_time]
+  end
+
+  def self.seed; ... end
+  def self.reproduce(a, b, crossover_rate = 0.4); ... end
+  def self.mutate(chromosome, mutation_rate = 0.3); ... end
+end
+
+search = Ai4r::GeneticAlgorithm::GeneticSearch.new(
+  50, 100, RouteChromosome, 0.2, 0.7,
+  nil, nil, nil,
+  objective_directions: %i[minimize minimize]
+)
+pareto_front = search.run
+```
+
+`run` returns the final first non-dominated front. In NSGA-II mode the
+optional callback receives `(generation, pareto_front)`. Chromosomes also
+expose their `rank` and `crowding_distance` after environmental selection.
+`reproduce` should return a new chromosome and must not mutate its arguments;
+mutation is applied only to offspring so retained elites are not changed in
+place.
+
 ## Tutorial: Bit String Maximization
 
 As a quick example, suppose we want to maximise the number of ones in a binary
@@ -106,7 +139,9 @@ search = Ai4r::GeneticAlgorithm::GeneticSearch.new(
   crossover_rate = 0.4,
   fitness_threshold = nil,
   max_stagnation = nil,
-  on_generation = nil
+  on_generation = nil,
+  objective_directions: nil,
+  mode: nil
 )
 ```
 
@@ -119,6 +154,10 @@ search = Ai4r::GeneticAlgorithm::GeneticSearch.new(
 * `max_stagnation` – stop if no improvement occurs for this many generations.
 * `on_generation` – callback invoked every generation with
   `(generation, best_fitness)`.
+* `objective_directions` – array such as `[:minimize, :maximize]`; providing
+  it enables NSGA-II, whose callback receives `(generation, pareto_front)`.
+* `mode` – defaults to standard genetic search, or `:nsga_ii` when objectives
+  are supplied. Explicitly pass `mode: :standard` only for scalar fitness.
 
 Defaults maintain the behaviour used by `TspChromosome`:
 

@@ -4,9 +4,11 @@ module Ai4r
   module GeneticAlgorithm
     # Base interface for chromosomes used by GeneticSearch.
     # Implementations must define class methods `seed`, `mutate`,
-    # `reproduce` and the instance method `fitness`.
+    # `reproduce` and the instance method `fitness`. Standard search expects
+    # `fitness` to return one Numeric value. NSGA-II expects an Array of
+    # Numeric objective values and never mutates parent chromosomes directly.
     class ChromosomeBase
-      attr_accessor :data, :normalized_fitness
+      attr_accessor :data, :normalized_fitness, :rank, :crowding_distance
 
       # @param data [Object]
       # @return [Object]
