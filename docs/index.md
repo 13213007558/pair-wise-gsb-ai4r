@@ -51,6 +51,7 @@ require 'ai4r'
 * [Monte Carlo Tree Search](monte_carlo_tree_search.md) – generic UCT search.
 * [A* Search](a_star_search.md) – heuristic best-first path search.
 * [Transformer](transformer.md) – a minimal take on the attention-powered architecture that transformed modern AI.
+* [GRU](gru.md) – a small gated recurrent network for short sequences, trained with truncated BPTT.
 * [Decode-only Classification Example](../examples/transformer/decode_classifier_example.rb)
 * [Encoder Text Classification Example](../examples/neural_network/transformer_text_classification.rb)
 * [Seq2seq Example](../examples/transformer/seq2seq_example.rb)
