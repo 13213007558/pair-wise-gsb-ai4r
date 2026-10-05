@@ -132,6 +132,38 @@ search = Ai4r::GeneticAlgorithm::GeneticSearch.new(
 
 Running the search with a larger population and more generations usually finds cheaper tours.
 
+## Multi-objective Search (NSGA-II)
+
+When choices involve trade-offs, such as route cost and delivery time, return a
+vector from `#fitness` and declare the direction of every objective. Use
+`:minimize` for smaller values and `:maximize` for larger values:
+
+```ruby
+class RouteChromosome < Ai4r::GeneticAlgorithm::ChromosomeBase
+  def fitness
+    [cost, delivery_time]
+  end
+
+  def self.seed; ... end
+  def self.reproduce(a, b, crossover_rate = 0.4); ... end
+  def self.mutate(chromosome, mutation_rate = 0.3); ... end
+end
+
+search = Ai4r::GeneticAlgorithm::GeneticSearch.new(
+  50, 100, RouteChromosome, 0.2, 0.7,
+  objectives: %i[minimize minimize]
+)
+front = search.run
+```
+
+In this mode, `#run` returns the final non-dominated Pareto front rather than a
+single chromosome. Each generation combines parents and offspring, then uses
+non-dominated ranking followed by crowding distance to retain exactly the
+population size. Ties caused by constant objectives, identical objective
+vectors, or boundary solutions preserve population order. Crossover and
+mutation operate on copies, so chromosomes already retained as elites are not
+changed in place.
+
 ## Example Usage
 
 ```ruby
