@@ -22,6 +22,10 @@ path = Ai4r::Search::AStar.new(start, goal_test, neighbor_fn, heuristic_fn).sear
 The call returns the path as an array of nodes or `nil` when the goal cannot be
 reached.
 
+When you need a usable route before the search has proven optimality and want
+to keep improving it under an explicit budget, see
+[Anytime Repairing A*](ara_star_search.md).
+
 ### Trying it out
 
 Use the grid problem from the search bench to see A* in action. The

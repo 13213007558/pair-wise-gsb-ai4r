@@ -52,5 +52,7 @@ discussion.
 ## More search strategies
 
 For heuristic path finding see [A* Search](a_star_search.md).
+For a budgeted anytime search that returns a route first and improves it
+afterward, see [Anytime Repairing A*](ara_star_search.md).
 For probabilistic exploration check
 [Monte Carlo Tree Search](monte_carlo_tree_search.md).

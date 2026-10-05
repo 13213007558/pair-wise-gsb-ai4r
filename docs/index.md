@@ -50,6 +50,7 @@ require 'ai4r'
 * [Clusterer Bench](clusterer_bench.md) – compare clustering algorithms on small datasets.
 * [Monte Carlo Tree Search](monte_carlo_tree_search.md) – generic UCT search.
 * [A* Search](a_star_search.md) – heuristic best-first path search.
+* [Anytime Repairing A*](ara_star_search.md) – budgeted ARA* sessions that first return a route, then improve it.
 * [Transformer](transformer.md) – a minimal take on the attention-powered architecture that transformed modern AI.
 * [Decode-only Classification Example](../examples/transformer/decode_classifier_example.rb)
 * [Encoder Text Classification Example](../examples/neural_network/transformer_text_classification.rb)
