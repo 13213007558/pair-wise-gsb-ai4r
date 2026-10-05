@@ -52,5 +52,8 @@ discussion.
 ## More search strategies
 
 For heuristic path finding see [A* Search](a_star_search.md).
+For an anytime heuristic search that returns a bounded route immediately and
+can be paused and resumed by a node-expansion budget, see
+[ARA* Search](ara_star_search.md).
 For probabilistic exploration check
 [Monte Carlo Tree Search](monte_carlo_tree_search.md).

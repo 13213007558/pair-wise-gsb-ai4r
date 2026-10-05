@@ -24,6 +24,11 @@ reached.
 
 ### Trying it out
 
+When a route is needed before the optimal search finishes and more node
+expansions can be spent later, see [ARA* Search](ara_star_search.md) for an
+anytime session that returns a bounded suboptimal route first and tightens it
+toward the optimum.
+
 Use the grid problem from the search bench to see A* in action. The
 heuristic already provided in the problem estimates the Manhattan
 distance to the goal.
