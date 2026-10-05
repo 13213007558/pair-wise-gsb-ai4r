@@ -45,6 +45,7 @@ Datasets can be loaded from CSV files or created directly from arrays. Numeric a
 AI4R includes several algorithms:
 
 * [ID3 Decision Trees](machine_learning.md)
+* [RIPPER-style Classifier](ripper_classifier.md)
 * [Neural Networks](neural_networks.md) with backpropagation
 * [Transformer](transformer.md) for sequence processing
 * [Genetic Algorithms](genetic_algorithms.md) for optimization
@@ -71,4 +72,3 @@ Install the development dependencies and run the test suite:
 bundle install
 bundle exec rake test
 ```
-

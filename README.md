@@ -61,6 +61,7 @@ You’ll find in [lib/ai4r/classifiers/](lib/ai4r/classifiers/):
 - `LogisticRegression`, `SimpleLinearRegression`
 - `SupportVectorMachine`
 - `RandomForest`, `GradientBoosting`
+- `RipperClassifier` – pruned ordered rules for noisy data
 - `MultilayerPerceptron`
 
 Docs: [logistic_regression.md](docs/logistic_regression.md), [random_forest.md](docs/random_forest.md)
@@ -171,4 +172,3 @@ ruby bench/classifier/compare_all.rb
 ## 💬 Feedback?
 
 This library is maintained for the joy of it (and perhaps a misplaced sense of duty to Ruby). You can do whatever you want with it—it’s unlicensed. If you build something cool or just find it useful, drop a note in the [project's comments](https://github.com/SergioFierens/ai4r/discussions).
-

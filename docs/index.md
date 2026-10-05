@@ -34,6 +34,7 @@ require 'ai4r'
 * [KMeans](kmeans.md) – partition data into k clusters with iterative centroid updates.
 * [ID3 Decision Trees](machine_learning.md) – interpretable rules for marketing targets.
 * [PRISM](prism.md) – rule induction algorithm for discrete attributes.
+* [RIPPER-style Classifier](ripper_classifier.md) – pruned ordered rules for noisy data.
 * [Naive Bayes Classifier](naive_bayes.md) – probabilistic classification for categorical data.
 * [Hyperpipes](hyperpipes.md) – baseline classifier using value ranges.
 * [IB1 Classifier](ib1.md) – instance-based nearest neighbour algorithm.
