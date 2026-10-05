@@ -58,12 +58,13 @@ Everything from attention weights to layer normalization is short enough to read
 You’ll find in [lib/ai4r/classifiers/](lib/ai4r/classifiers/):
 
 - `ZeroR`, `OneR` – the simplest baselines
+- `ID3`, `CART` – explainable decision trees (binary splits, surrogates, pruning)
 - `LogisticRegression`, `SimpleLinearRegression`
 - `SupportVectorMachine`
 - `RandomForest`, `GradientBoosting`
 - `MultilayerPerceptron`
 
-Docs: [logistic_regression.md](docs/logistic_regression.md), [random_forest.md](docs/random_forest.md)
+Docs: [cart.md](docs/cart.md), [logistic_regression.md](docs/logistic_regression.md), [random_forest.md](docs/random_forest.md)
 
 Try this: run `compare_all.rb` to benchmark classifiers on real datasets.
 
@@ -171,4 +172,3 @@ ruby bench/classifier/compare_all.rb
 ## 💬 Feedback?
 
 This library is maintained for the joy of it (and perhaps a misplaced sense of duty to Ruby). You can do whatever you want with it—it’s unlicensed. If you build something cool or just find it useful, drop a note in the [project's comments](https://github.com/SergioFierens/ai4r/discussions).
-

@@ -26,6 +26,7 @@ require_relative 'ai4r/clusterers/dbscan'
 # Classifiers
 require_relative 'ai4r/classifiers/classifier'
 require_relative 'ai4r/classifiers/id3'
+require_relative 'ai4r/classifiers/cart'
 require_relative 'ai4r/classifiers/multilayer_perceptron'
 require_relative 'ai4r/classifiers/prism'
 require_relative 'ai4r/classifiers/one_r'
