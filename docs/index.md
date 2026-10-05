@@ -43,6 +43,7 @@ require 'ai4r'
 * [Random Forest](random_forest.md) – ensemble of decision trees.
 * [Support Vector Machine](support_vector_machine.md) – linear SVM with SGD.
 * [Gradient Boosting](gradient_boosting.md) – boosted regressors.
+* [SAMME](samme.md) – multi-class AdaBoost over weak classifiers.
 * [Simple Linear Regression](simple_linear_regression.md) – fit a line to one attribute.
 * [Multilayer Perceptron](multilayer_perceptron.md) – neural network classifier.
 * [Reinforcement Learning](reinforcement_learning.md) – Q-learning and policy iteration.
