@@ -38,6 +38,7 @@ require 'ai4r'
 * [Hyperpipes](hyperpipes.md) – baseline classifier using value ranges.
 * [IB1 Classifier](ib1.md) – instance-based nearest neighbour algorithm.
 * [Logistic Regression](logistic_regression.md) – binary classifier trained with gradient descent.
+* [Bayesian Probit](bayesian_probit.md) – binary classifier with a Gaussian prior, posterior uncertainty and uncertainty-aware predictions.
 * [OneR](one_r.md) – single attribute rules.
 * [ZeroR](zero_r.md) – majority class baseline.
 * [Random Forest](random_forest.md) – ensemble of decision trees.
