@@ -36,6 +36,7 @@ require_relative 'ai4r/classifiers/ib1'
 require_relative 'ai4r/classifiers/random_forest'
 require_relative 'ai4r/classifiers/gradient_boosting'
 require_relative 'ai4r/classifiers/support_vector_machine'
+require_relative 'ai4r/classifiers/bayesian_probit'
 
 # Neural networks
 require_relative 'ai4r/neural_network/backpropagation'
