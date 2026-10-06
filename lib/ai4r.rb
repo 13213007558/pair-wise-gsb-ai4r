@@ -11,6 +11,7 @@ require_relative 'ai4r/data/parameterizable'
 # Clusterers
 require_relative 'ai4r/clusterers/clusterer'
 require_relative 'ai4r/clusterers/k_means'
+require_relative 'ai4r/clusterers/constrained_k_means'
 require_relative 'ai4r/clusterers/bisecting_k_means'
 require_relative 'ai4r/clusterers/single_linkage'
 require_relative 'ai4r/clusterers/complete_linkage'
